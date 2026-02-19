@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 // Register EF Core with MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<StudentDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 0))));
 
 // CORS — allow all origins (for development)
 builder.Services.AddCors(options =>
@@ -24,6 +24,13 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// Auto-create database tables on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<StudentDbContext>();
+    db.Database.EnsureCreated();
+}
+
 // OpenAPI spec + Scalar interactive UI (available in all environments)
 app.MapOpenApi();
 app.MapScalarApiReference();
@@ -33,3 +40,4 @@ app.UseCors("AllowAll");
 app.MapControllers();
 
 app.Run();
+
