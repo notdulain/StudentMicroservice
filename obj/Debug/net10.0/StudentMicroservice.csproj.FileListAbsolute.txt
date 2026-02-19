@@ -36,3 +36,5 @@
 /Users/realdulain/Documents/SLIIT/Y3S1/CSP - SE3022 - Case Study Project/Lectures/Dotnet-Lecture/backend-standalone/StudentMicroservice/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/realdulain/Documents/SLIIT/Y3S1/CSP - SE3022 - Case Study Project/Lectures/Dotnet-Lecture/backend-standalone/StudentMicroservice/bin/Debug/net10.0/MySqlConnector.dll
 /Users/realdulain/Documents/SLIIT/Y3S1/CSP - SE3022 - Case Study Project/Lectures/Dotnet-Lecture/backend-standalone/StudentMicroservice/bin/Debug/net10.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/realdulain/Documents/SLIIT/Y3S1/CSP - SE3022 - Case Study Project/Lectures/Dotnet-Lecture/backend-standalone/StudentMicroservice/bin/Debug/net10.0/Scalar.AspNetCore.dll
+/Users/realdulain/Documents/SLIIT/Y3S1/CSP - SE3022 - Case Study Project/Lectures/Dotnet-Lecture/backend-standalone/StudentMicroservice/obj/Debug/net10.0/StudentMicroservice.sourcelink.json
